@@ -20,6 +20,7 @@ func main() {
 		configurationPath = flag.Arg(0)
 	}
 	if configurationPath == "" {
+<<<<<<< HEAD
 		configurationPath = os.Getenv("REGISTRY_CONFIGURATION_PATH")
 	}
 
@@ -29,6 +30,11 @@ func main() {
 	}
 	// Prevent a warning about unrecognized environment variable
 	os.Unsetenv("REGISTRY_CONFIGURATION_PATH")
+=======
+		fmt.Println("configuration path unspecified")
+		os.Exit(1)
+	}
+>>>>>>> a967081138277d7e44651d9773a272ac8045916e
 
 	configFile, err := os.Open(configurationPath)
 	if err != nil {
